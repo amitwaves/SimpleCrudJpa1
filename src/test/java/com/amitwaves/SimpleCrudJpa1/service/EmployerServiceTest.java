@@ -47,7 +47,7 @@ public class EmployerServiceTest {
     @Test
     public void testGetOne_ThrowsException() {
         String message = MessageFormat.format("Resource not found for id {0}", Long.MAX_VALUE);
-        doReturn(Optional.empty()).when(respositoryMock).findOne(any(Example.class));
+            doReturn(Optional.empty()).when(respositoryMock).findOne(any(Example.class));
         Throwable thrown = catchThrowable(() -> {
             service.getOne(Long.MAX_VALUE);
             throw new ResourceNotFoundException(message);

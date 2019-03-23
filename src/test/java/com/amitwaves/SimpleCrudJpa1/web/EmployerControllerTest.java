@@ -22,6 +22,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  *
  * @author amit
+ * Instantiates only the web layer and not the server or application 
+ * context. Test runs even faster. 
  */
 @RunWith(SpringRunner.class)
 @WebMvcTest(EmployerController.class)

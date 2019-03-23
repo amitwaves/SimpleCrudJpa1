@@ -23,16 +23,19 @@ import org.springframework.web.util.UriComponentsBuilder;
 /**
  *
  * @author amit
+ * Starts the full server and injects a local random port. 
+ * Also, provides a TestRestTemplate. An HTTP request is made
+ * using the rest template.
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class EmployerControllerIntegrationTest {
+public class EmployerControllerHttpRequestTest {
 
     @LocalServerPort
     private int port;
 
     @Autowired
-    private TestRestTemplate testRestTemplate;
+        private TestRestTemplate testRestTemplate;
 
     @Test
     public void testGet() throws Exception {
