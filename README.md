@@ -8,3 +8,4 @@ This application demonstrate the following.
 5. Integration tests using SpringBootTest annotation.  
 6. Spring Data Repository using JpaRepository.  
 7. Hibernate JPA with bi-directional one-to-many relationship.  
+8. Testing the spring boot controller web layer. 
